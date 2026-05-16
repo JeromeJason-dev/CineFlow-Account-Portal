@@ -17,115 +17,117 @@
     <hr>
 
     <!-- Multimedia Integration Section -->
-    <section>
-        <h2>Welcome Future Creators</h2>
+    <main>
+        <section>
+            <h2>Welcome Future Creators</h2>
 
-        <!-- Video Element with controls, poster, and dual sources -->
-        <p>Watch this brief promotional video to see what our network offers:</p>
-        <video controls poster="assets/images/jakub-zerdzicki-_XaZCGUFXeE-unsplash.jpg" width="480">
-            <source src="assets/videos/Promo Video.mp4" type="video/mp4">
-            <source src="assets/videos/Promo Video.webm" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
+            <!-- Video Element with controls, poster, and dual sources -->
+            <p>Watch this brief promotional video to see what our network offers:</p>
+            <video controls poster="assets/images/jakub-zerdzicki-_XaZCGUFXeE-unsplash.jpg" width="480">
+                <source src="assets/videos/Promo Video.mp4" type="video/mp4">
+                <source src="assets/videos/Promo Video.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
 
-        <!-- Audio Element with controls -->
-        <p>Listen to these quick, helpful tips before filling out your application:</p>
-        <audio controls>
-            <source src="assets/audio/luvvoice.com-20260516-X5BRaF.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </section>
+            <!-- Audio Element with controls -->
+            <p>Listen to these quick, helpful tips before filling out your application:</p>
+            <audio controls>
+                <source src="assets/audio/luvvoice.com-20260516-X5BRaF.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
 
+        <br>
+        <hr><br>
+
+        <!-- Registration Form -->
+        <form action="/submit-creator-registration" method="POST">
+
+            <!-- Group 1: Personal Information -->
+            <fieldset>
+                <legend><strong>Personal Information</strong></legend>
+
+                <!-- Full Name (Text input, Required) -->
+                <p>
+                    <label for="full-name">Full Name:</label><br>
+                    <input type="text" id="full-name" name="full-name" required placeholder="e.g., John Doe">
+                </p>
+
+                <!-- Username (Text input, Required, Regex Pattern for Alphanumeric only) -->
+                <p>
+                    <label for="username">Username (Letters and numbers only, no spaces):</label><br>
+                    <input type="text" id="username" name="username" required pattern="[A-Za-z0-9]+"
+                        placeholder="e.g., CreatorJohn123">
+                </p>
+
+                <!-- Email Address (Email input, Required) -->
+                <p>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="e.g., john@example.com">
+                </p>
+
+                <!-- Password (Password input, Required, Minlength enforced) -->
+                <p>
+                    <label for="password">Password (Minimum 8 characters):</label><br>
+                    <input type="password" id="password" name="password" required minlength="8" placeholder="••••••••">
+                </p>
+
+                <!-- Date of Birth -->
+                <p>
+                    <label for="dob">Date of Birth (Must be 18+):</label><br>
+                    <input type="date" id="dob" name="dob" required max="2008-05-16">
+                </p>
+
+                <!-- Profile Picture (File input, Required, limited to .jpg and .png) -->
+                <p>
+                    <label for="profile-pic">Upload Profile Picture (.jpg or .png only):</label><br>
+                    <input type="file" id="profile-pic" name="profile-pic" required accept=".jpg, .png">
+                </p>
+            </fieldset>
+
+            <br>
+
+            <!-- Group 2: Channel Settings & Content -->
+            <fieldset>
+                <legend><strong>Channel Settings</strong></legend>
+
+                <!-- Content Genres (Checkboxes, Required) -->
+
+                <p><strong>Content Genres (Select all that apply):</strong></p>
+                <p>
+                    <input type="checkbox" id="genre-tech" name="genres" value="tech">
+                    <label for="genre-tech">Technology</label><br>
+
+                    <input type="checkbox" id="genre-lifestyle" name="genres" value="lifestyle">
+                    <label for="genre-lifestyle">Lifestyle</label><br>
+
+                    <input type="checkbox" id="genre-gaming" name="genres" value="gaming">
+                    <label for="genre-gaming">Gaming</label><br>
+
+                    <input type="checkbox" id="genre-education" name="genres" value="education">
+                    <label for="genre-education">Education</label>
+                </p>
+
+                <!-- Expected Weekly Upload Volume (Range slider, Optional / Not Required, 0 to 10) -->
+                <p>
+                    <label for="upload-volume">Expected Weekly Upload Volume (0 to 10 videos):</label><br>
+                    <span>0</span>
+                    <input type="range" id="upload-volume" name="upload-volume" min="0" max="10" value="1">
+                    <span>10</span>
+                </p>
+            </fieldset>
+    </main>
+  
     <br>
-    <hr><br>
 
-    <!-- Registration Form -->
-    <form action="/submit-creator-registration" method="POST">
-
-        <!-- Group 1: Personal Information -->
-        <fieldset>
-            <legend><strong>Personal Information</strong></legend>
-
-            <!-- Full Name (Text input, Required) -->
-            <p>
-                <label for="full-name">Full Name:</label><br>
-                <input type="text" id="full-name" name="full-name" required placeholder="e.g., John Doe">
-            </p>
-
-            <!-- Username (Text input, Required, Regex Pattern for Alphanumeric only) -->
-            <p>
-                <label for="username">Username (Letters and numbers only, no spaces):</label><br>
-                <input type="text" id="username" name="username" required pattern="[A-Za-z0-9]+"
-                    placeholder="e.g., CreatorJohn123">
-            </p>
-
-            <!-- Email Address (Email input, Required) -->
-            <p>
-                <label for="email">Email Address:</label><br>
-                <input type="email" id="email" name="email" required placeholder="e.g., john@example.com">
-            </p>
-
-            <!-- Password (Password input, Required, Minlength enforced) -->
-            <p>
-                <label for="password">Password (Minimum 8 characters):</label><br>
-                <input type="password" id="password" name="password" required minlength="8" placeholder="••••••••">
-            </p>
-
-            <!-- Date of Birth -->
-            <p>
-                <label for="dob">Date of Birth (Must be 18+):</label><br>
-                <input type="date" id="dob" name="dob" required max="2008-05-16">
-            </p>
-
-            <!-- Profile Picture (File input, Required, limited to .jpg and .png) -->
-            <p>
-                <label for="profile-pic">Upload Profile Picture (.jpg or .png only):</label><br>
-                <input type="file" id="profile-pic" name="profile-pic" required accept=".jpg, .png">
-            </p>
-        </fieldset>
-
-        <br>
-
-        <!-- Group 2: Channel Settings & Content -->
-        <fieldset>
-            <legend><strong>Channel Settings</strong></legend>
-
-            <!-- Content Genres (Checkboxes, Required) -->
-
-            <p><strong>Content Genres (Select all that apply):</strong></p>
-            <p>
-                <input type="checkbox" id="genre-tech" name="genres" value="tech">
-                <label for="genre-tech">Technology</label><br>
-
-                <input type="checkbox" id="genre-lifestyle" name="genres" value="lifestyle">
-                <label for="genre-lifestyle">Lifestyle</label><br>
-
-                <input type="checkbox" id="genre-gaming" name="genres" value="gaming">
-                <label for="genre-gaming">Gaming</label><br>
-
-                <input type="checkbox" id="genre-education" name="genres" value="education">
-                <label for="genre-education">Education</label>
-            </p>
-
-            <!-- Expected Weekly Upload Volume (Range slider, Optional / Not Required, 0 to 10) -->
-            <p>
-                <label for="upload-volume">Expected Weekly Upload Volume (0 to 10 videos):</label><br>
-                <span>0</span>
-                <input type="range" id="upload-volume" name="upload-volume" min="0" max="10" value="1">
-                <span>10</span>
-            </p>
-        </fieldset>
-
-        <br>
-
-        <!-- Form Actions -->
+    <!-- Form Actions -->
         <div>
             <button type="submit">Submit Registration</button>
             <button type="reset">Reset Form</button>
         </div>
 
-    </form>
-
+        </form>
+        <p>&copy; 2026 CineFlow-Account-Portal. All rights reserved</p>
 </body>
 
 </html>
