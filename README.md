@@ -24,15 +24,15 @@ To keep the platform's multimedia features loading seamlessly, ensure your local
 ```text
 cineflow-portal/
 │
-├── index.html                  # Main registration form interface
-└── assets/                     # Media resource root
+├── index.html                  # Core normalized onboarding page layout
+└── assets/                     # Media asset directory
     ├── images/
-    │   └── jakub-zerdzicki-_XaZCGUFXeE-unsplash.jpg   # Video poster image
+    │   └── logo-poster.jpg     # completely lowercase asset path
     ├── videos/
-    │   ├── Promo Video.mp4     # Universal standard video source
-    │   └── Promo Video.webm    # Web-optimized high-efficiency fallback
+    │   ├── promo-video.mp4     # Space strings removed for web safety
+    │   └── promo-video.webm    # Safe, lowercase structural format path
     └── audio/
-        └── luvvoice.com-20260516-X5BRaF.mp3          # Helpful tips audio guide
+        └── onboarding-tips.mp3     # Clean, readable production audio guide
 
 ```
 

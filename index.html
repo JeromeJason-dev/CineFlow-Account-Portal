@@ -24,8 +24,8 @@
             <!-- Video Element with controls, poster, and dual sources -->
             <p>Watch this brief promotional video to see what our network offers:</p>
             <video controls poster="assets/images/jakub-zerdzicki-_XaZCGUFXeE-unsplash.jpg" width="480">
-                <source src="assets/videos/Promo Video.mp4" type="video/mp4">
-                <source src="assets/videos/Promo Video.webm" type="video/webm">
+                <source src="assets/videos/promo-video.mp4" type="video/mp4">
+                <source src="assets/videos/promo-video.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>
 
@@ -41,7 +41,7 @@
         <hr><br>
 
         <!-- Registration Form -->
-        <form action="/submit-creator-registration" method="POST">
+        <form action="/submit-creator-registration" method="POST" enctype="multipart/form-data">
 
             <!-- Group 1: Personal Information -->
             <fieldset>
@@ -116,18 +116,21 @@
                     <span>10</span>
                 </p>
             </fieldset>
-    </main>
-  
-    <br>
 
-    <!-- Form Actions -->
-        <div>
-            <button type="submit">Submit Registration</button>
-            <button type="reset">Reset Form</button>
-        </div>
+            <br>
+
+            <!-- Form Actions -->
+            <div>
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Reset Form</button>
+            </div>
 
         </form>
-        <p>&copy; 2026 CineFlow-Account-Portal. All rights reserved</p>
-</body>
+    </main>
 
+    <footer>
+        <p>&copy; 2026 CineFlow-Account-Portal. All rights
+        reserved</p>
+    </footer>
+</body>
 </html>
