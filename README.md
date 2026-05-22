@@ -43,9 +43,12 @@ HTML5
 
 ### Installation
 1. Clone the repository:
-bash git clone https://github.com/JeromeJason-dev/CineFlow-Account-Portal.git
+```
+bash 
+git clone https://github.com/JeromeJason-dev/CineFlow-Account-Portal.git
 
-cd &nbsp;CineFlow-Account-Portal
+cd CineFlow-Account-Portal
+```
 
 ## FUTURE ROADMAP
 * [] Add CSS styling for polished visual design
